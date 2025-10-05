@@ -1,5 +1,4 @@
-﻿
-# Snowflake Fraud Detection (Ingest → Stream → Rules)
+﻿# Snowflake Fraud Detection (Ingest → Stream → Rules)
 
 - Ingests credit card transactions (Kaggle dataset).
 - Uses a Snowflake **STREAM** to process only new rows.
@@ -15,3 +14,8 @@
 6. Run `sql/04_seed_rules.sql`
 7. `CALL ANALYTICS.SP_EVAL_RULES();`
 
+
+
+## Contribution
+
+Anyone is welcome to contribute to this repo
