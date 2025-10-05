@@ -1,15 +1,1 @@
-# SnowSQL config
-.snowsql/
-
-# Raw data & artifacts
-*.csv
-*.gz
-*.log
-
-# Keys/certs
-*.pem
-*.p12
-
-# Ignore everything in data/ but keep the placeholder
-data/**
-!data/.gitkeep
+ÿþ
