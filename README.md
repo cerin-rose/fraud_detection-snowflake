@@ -161,20 +161,73 @@ Your project uses Snowflake as the full end-to-end data platform:
 
 ## 8) IMPLEMENTATION
 
-### 8.1 Folder Structure (Template)
+### 8.1 Folder Structure
 
-project-root/
-├─ README.md
-├─ images/                     # screenshots & diagrams
-├─ sql/                        # DDL/DML/proc scripts
-│  ├─ 00_context.sql
-│  ├─ 01_objects_raw.sql
-│  ├─ 02_objects_analytics.sql
-│  ├─ 03_proc_eval_rules.sql
-│  └─ 04_seed_rules.sql
-├─ app/                        # future
-│  ├─ requirements.txt
-│  └─ app.py
+fraud_detection-snowflake/
+│
+├── README.md                 # Full project documentation
+├── requirements.txt          # Dependencies list
+├── .gitignore                # Ignored files for Git
+│
+├── data/                     # Raw & processed datasets
+│   ├── raw/                  # Uncleaned data (CSV, JSON, etc.)
+│   └── processed/            # Cleaned/transformed data
+│
+├── notebooks/                # Jupyter notebooks for EDA/modeling
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_model_training.ipynb
+│   └── 04_evaluation.ipynb
+│
+├── scripts/                  # Core Python scripts (for re-use)
+│   ├── data_preprocessing.py
+│   ├── model_train.py
+│   ├── model_eval.py
+│   ├── utils.py
+│   └── config_loader.py
+│
+├── sql/                      # Snowflake SQL files
+│   ├── 00_context.sql
+│   ├── 01_objects_raw.sql
+│   ├── 02_objects_analytics.sql
+│   ├── 03_proc_eval_rules.sql
+│   └── 04_seed_rules.sql
+│
+├── dashboard/                # Streamlit / dashboard app
+│   ├── app.py
+│   ├── dashboard_config.json
+│   └── assets/               # dashboard images, logos, icons
+│
+├── results/                  # Outputs, metrics, reports
+│   ├── fraud_summary.csv
+│   ├── confusion_matrix.png
+│   ├── dashboard_preview.png
+│   └── performance_metrics.txt
+│
+├── images/                   # Screenshots & architecture diagrams
+│   ├── architecture.png
+│   ├── data_pipeline.png
+│   ├── workflow_diagram.png
+│   └── dashboard_snapshot.png
+│
+└── docs/                     # Research paper, report, & references
+    ├── project_report.pdf
+    ├── reference_paper.pdf
+    ├── methodology_diagram.drawio
+    └── progress_notes.md
+
+
+
+| Section              | Purpose                                                                                                         |
+| -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **data/**      | Keeps input datasets cleanly separated into raw & processed.                                                    |
+| **notebooks/** | Demonstrates your experimentation and analysis flow clearly.                                                    |
+| **scripts/**   | Converts notebooks into modular, reusable Python scripts.                                                       |
+| **sql/**       | Follows a professional Snowflake data-pipeline order (context → raw → analytics → procedures → seed rules). |
+| **dashboard/** | Adds storytelling and visualization (Streamlit/Power BI).                                                       |
+| **results/**   | Stores model results, plots, and screenshots for the report.                                                    |
+| **images/**    | For README and project report visuals.                                                                          |
+| **docs/**      | Keeps your academic materials neat and easy to find.                                                            |
 
 ### 8.2 Pseudocode (Rule‑based Engine)
 
