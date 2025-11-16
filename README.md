@@ -268,9 +268,6 @@ fraud_detection-snowflake/
 7. `CALL ANALYTICS.SP_EVAL_RULES();`
 
 ## Contribution
-
-Anyone is welcome to contribute to this repo
-
-hi
-
+dont contribute.
 hi2
+
